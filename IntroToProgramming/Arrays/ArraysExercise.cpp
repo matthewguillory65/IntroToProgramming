@@ -24,7 +24,55 @@ void ArrayQuestion1()
 void ArrayQuestion2()
 {
 	int values[] = { 2, 6, 10, 14 };
-	cout << values[2];
+
+	cout << "values[2]; This does work. \n \n";
+
+	cout << "++values[0]; This does not work. \n \n";
+
+	cout << "values[1]++; This does work. \n \n";
+
+	cout << "x = 2; This does not work. \n \n";
+
+	cout << "values[++x]; This does not work. \n \n";
+
+	cout << "values[4]; This does work. \n \n";
+}
+
+void ArrayQuestion3()
+{
+	int numbers[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+	for (int i = 0; i < 10;)
+		cout << numbers[10];
+}
+
+void ArrayQuestion4()
+{
+
+}
+
+void ArrayQuestion5()
+{
+
+}
+
+void ArrayQuestion6()
+{
+
+}
+
+void ArrayQuestion7()
+{
+
+}
+
+void ArrayQuestion8()
+{
+
+}
+
+void ArrayQuestion9()
+{
+
 }
 
 int main()
@@ -39,6 +87,30 @@ int main()
 		switch (input)
 		{
 		case '1': ArrayQuestion1();
+			break;
+
+		case '2': ArrayQuestion2();
+			break;
+
+		case '3': ArrayQuestion3();
+			break;
+
+		case '4': ArrayQuestion4();
+			break;
+
+		case '5': ArrayQuestion5();
+			break;
+
+		case '6': ArrayQuestion6();
+			break;
+
+		case '7': ArrayQuestion7();
+			break;
+
+		case '8': ArrayQuestion8();
+			break;
+
+		case '9': ArrayQuestion9();
 			break;
 
 		default:
