@@ -40,9 +40,12 @@ void ArrayQuestion2()
 
 void ArrayQuestion3()
 {
-	int numbers[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-	for (int i = 0; i < 10;)
-		cout << numbers[10];
+	int numbers[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+	int number = 0;
+
+	for (int i = 0; i < 10; i++)
+		cout << numbers[i] << " \n";
+		
 }
 
 void ArrayQuestion4()
@@ -83,6 +86,7 @@ int main()
 	{
 		cout << "Pick question number, or press q to quit.\n";
 		cin >> input;
+		cout << endl;
 
 		switch (input)
 		{
