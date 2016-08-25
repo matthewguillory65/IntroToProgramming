@@ -50,27 +50,47 @@ void ArrayQuestion3()
 
 void ArrayQuestion4()
 {
+	int arr[5];
 	int i;
-	int p;
-	int m;
-	int n;
-	int d;
 
-	cout << "Please give me five numbers: \n \n";
+	cout << "Please enter five numbers to reverse. \n \n";
 
-	int numbers[5] = { i, p, m, n, d };
-	for (int i = 0; i < 5; i++)
-	cin >> i, p, m, n, d;
+	cin >> arr[0];
+	cin >> arr[1];
+	cin >> arr[2];
+	cin >> arr[3];
+	cin >> arr[4];
 
-	numbers[0] = i;
-	numbers[1] = p;
-	numbers[2] = m;
-	numbers[3] = n;
-	numbers[4] = d;
+	cout << endl;
+
+	for (int i = 4; i >= 0; i--)
+	{
+		cout << arr[i] << endl;
+	}
+
 }
 
 void ArrayQuestion5()
 {
+
+	int arr[10];
+	int i;
+
+	cout << "Please give me 10 numbers. \n \n";
+
+	cin >> arr[0];
+	cin >> arr[1];
+	cin >> arr[3];
+	cin >> arr[4];
+	cin >> arr[5];
+	cin >> arr[6];
+	cin >> arr[7];
+	cin >> arr[8];
+	cin >> arr[9];
+
+	cout << endl;
+
+
 
 }
 
