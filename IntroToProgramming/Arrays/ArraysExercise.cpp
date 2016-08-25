@@ -50,7 +50,23 @@ void ArrayQuestion3()
 
 void ArrayQuestion4()
 {
+	int i;
+	int p;
+	int m;
+	int n;
+	int d;
 
+	cout << "Please give me five numbers: \n \n";
+
+	int numbers[5] = { i, p, m, n, d };
+	for (int i = 0; i < 5; i++)
+	cin >> i, p, m, n, d;
+
+	numbers[0] = i;
+	numbers[1] = p;
+	numbers[2] = m;
+	numbers[3] = n;
+	numbers[4] = d;
 }
 
 void ArrayQuestion5()
