@@ -91,7 +91,8 @@ int main()
 	std::cin >> warrior >> healer;
 	char mage;
 	mage = ((int)warrior + (int)healer) / 2.0f;
-	std::cout << mage << std::endl;
+	std::cout << "This is the middle letter. \n" << mage << std::endl;
+	
 
 	system("pause");
 	return 0;

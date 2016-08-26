@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 
 using namespace std;
 
@@ -41,33 +42,29 @@ int Half()
 int CoinToss()
 {
 
-	for (int i = 0; i < CoinFlip; i++);
+	for (int i = 0; i < CoinFlip; i++)
 	{
 		CoinChance = rand();
 		if (CoinChance % 2 == 0)
-		{
 
 			cout << "\n" << "Heads";
-		}
 
 		else
-		{
+
 			cout << "\n" << "Tails";
-		}
+
 	}
 	return 0;
 }
-
 int main()
 {
-
-	cout << "1 \n";
-	cout << "1 \n";
-	cout << "2 \n";
-	cout << "2 \n";
-	cout << "3 \n";
-	cout << "2 \n";
-	cout << "1 \n";
+	//cout << "1 \n";
+	//cout << "1 \n";
+	//cout << "2 \n";
+	//cout << "2 \n";
+	//cout << "3 \n";
+	//cout << "2 \n";
+	//cout << "1 \n";
 
 	cin >> value1 >> value2;
 	surprise();
@@ -83,7 +80,6 @@ int main()
 	CoinToss();
 	cout << "\n";
 	system("pause");
-	cin >> CoinFlip;
 	return 0;
 
 

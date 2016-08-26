@@ -95,7 +95,17 @@ void ArrayQuestion5()
 }
 
 void ArrayQuestion6()
+/*Create a program that creates a small 3x3 array of integers.
+Use a nested for loop to initialisethe numbers 1 - 9.
+Output the numbers in a grid format.*/
 {
+	int numbers[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	for (int i = 0; i < 3; i++)
+	{
+		cout << endl;
+		for (int j = 0; j < 3; j++)
+			cout << numbers[i][j];
+	}
 
 }
 
