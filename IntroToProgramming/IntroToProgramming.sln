@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntroToProgramming", "IntroToProgramming\IntroToProgramming.vcxproj", "{A72D1EB2-72F4-41D1-976D-A4A89FE89BEE}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{1014DBE5-9B57-4FAB-A3DA-211DEB9F54B5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conditionals", "Conditionals\Conditionals.vcxproj", "{C7C2AF12-E2B6-4857-8457-50E803B03836}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZombieNinja", "ZombieNinja\ZombieNinja.vcxproj", "{2C991937-3767-401D-AB9A-6B7240A33091}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{C7C2AF12-E2B6-4857-8457-50E803B03836}.Release|x64.Build.0 = Release|x64
 		{C7C2AF12-E2B6-4857-8457-50E803B03836}.Release|x86.ActiveCfg = Release|Win32
 		{C7C2AF12-E2B6-4857-8457-50E803B03836}.Release|x86.Build.0 = Release|Win32
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Debug|x64.ActiveCfg = Debug|x64
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Debug|x64.Build.0 = Debug|x64
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Debug|x86.ActiveCfg = Debug|Win32
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Debug|x86.Build.0 = Debug|Win32
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Release|x64.ActiveCfg = Release|x64
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Release|x64.Build.0 = Release|x64
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Release|x86.ActiveCfg = Release|Win32
+		{2C991937-3767-401D-AB9A-6B7240A33091}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
