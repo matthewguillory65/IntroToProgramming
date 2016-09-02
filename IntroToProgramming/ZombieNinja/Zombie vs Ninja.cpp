@@ -15,7 +15,7 @@ struct Yourpokemon
 
 int Fight(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "Raichu used Thunderbolt! \n" << std::endl;
+	std::cout << "Raichu used Thunderbolt!" << std::endl;
 	n.health -= 75;
 	std::cout << "Super Effective! Charizard took 75 damage. \nCharizard's health is now: \n" << n.health << std::endl;
 	z.spirit -= 1;
@@ -26,7 +26,7 @@ int Fight(YourPokemon &z, Yourpokemon &n)
 
 int Fightv1(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "Raichu used Headbutt! \n" << std::endl;
+	std::cout << "Raichu used Headbutt!" << std::endl;
 	n.health -= 35;
 	std::cout << "Charizard took 35 damage. \nCharizard health is now: \n" << n.health << std::endl;
 	z.spirit -= 1;
@@ -37,7 +37,7 @@ int Fightv1(YourPokemon &z, Yourpokemon &n)
 
 int Fightv2(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "Raichu used Thunder Punch! \n" << std::endl;
+	std::cout << "Raichu used Thunder Punch!" << std::endl;
 	n.health -= 80;
 	std::cout << "Super effective! Charizard took 80 damage. \nCharizard health is now: \n" << n.health << std::endl;
 	z.spirit -= 1;
@@ -48,7 +48,7 @@ int Fightv2(YourPokemon &z, Yourpokemon &n)
 
 int Fightv3(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "Raichu used Thunder! \n" << std::endl;
+	std::cout << "Raichu used Thunder!" << std::endl;
 	n.health -= 120;
 	std::cout << "Super effective! Charizard took 120 damage. \nCharizard health is now: \n" << n.health << std::endl;
 	z.spirit -= 10;
@@ -357,17 +357,11 @@ int main()
 
 	while (input != 'q')
 	{
-		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
-		std::cout << "Press a, b, c, d, e, f, g, or h to start a fight. \n" << std::endl;
-		std::cout << "Press A, B, C, D, E, F, G, OR H to start a fight. \n" << std::endl;
-		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
-		std::cout << "|          If a, only use a and b keys          |" << std::endl;
-		std::cout << "|          If c, only use c and g keys          |" << std::endl;
-		std::cout << "|          If d, only use d and e keys          |" << std::endl;
-		std::cout << "|          If f, only use f and h keys          |" << std::endl;
-		std::cout << "|           Capital letters work too            |" << std::endl;
-		std::cout << "|                 In same order                 |" << std::endl;
-		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+		std::cout << "Use the below for battle, until the battle ends. " << std::endl;
+		std::cout << "a, A, b, B & c, C, d, D; use these together" << std::endl;
+		std::cout << "e, E, f, F & m, M, n, N; use these together" << std::endl;
+		std::cout << "g, G, h, H & i, I, j; use these together" << std::endl;
+		std::cout << "o, O, p, P & k, K, l; use these together" << std::endl;
 		std::cin >> input;
 		//raichu vs charizard
 		if (input == 'a')
