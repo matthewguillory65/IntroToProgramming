@@ -1,29 +1,29 @@
 #include <iostream>
-struct Zambie
+struct YourPokemon
 {
 	int health;
 	bool alive;
 	int spirit;
 };
-struct Ninja
+struct Yourpokemon
 {
 	int health;
 	bool alive;
 	int chi;
 };
-int Fight(Zambie &z, Ninja &n)
+int Fight(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "A Zambie(chris) is attacking a Ninja(regi)" << std::endl;
-	n.health -= 25;
-	std::cout << "The ninja took 25 damage. \nHis health is now -> " << n.health << std::endl;
+	std::cout << "Raichu used thunderbolt!" << std::endl;
+	n.health -= 75;
+	std::cout << "Super Effective! \nHis health is now -> " << n.health << std::endl;
 	z.spirit -= 1;
-	std::cout << "Since the zambie attacked, so his spirit is now -> " << z.spirit << std::endl;
+	std::cout << "Minus one PP -> " << z.spirit << std::endl;
 	return 1;
 }
 //This is the first zombie/ninja fight
-int SecondFight(Ninja &n, Zambie &z)
+int SecondFight(Yourpokemon &n, YourPokemon &z)
 {
-	std::cout << "A Ninja(regi) is attacking a Zambie(chris)" << std::endl;
+	std::cout << "A Ninja(Charizard) is attacking a Zambie(Raichu)" << std::endl;
 	z.health -= 35;
 	std::cout << "The Zambie took 35 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -31,9 +31,9 @@ int SecondFight(Ninja &n, Zambie &z)
 	return 2;
 }
 
-int TheThirdFight(Ninja &n, Zambie &z)
+int TheThirdFight(Yourpokemon &n, YourPokemon &z)
 {
-	std::cout << "A Ninja(regi) is attacking a Zambie(matthew)" << std::endl;
+	std::cout << "A Ninja(Charizard) is attacking a Zambie(Snorlax)" << std::endl;
 	z.health -= 35;
 	std::cout << "The Zambie took 35 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -41,9 +41,9 @@ int TheThirdFight(Ninja &n, Zambie &z)
 	return 3;
 }
 
-int FourthFight(Zambie &z, Ninja &n)
+int FourthFight(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "A Zambie(chris) is attacking a Ninja(wilson)" << std::endl;
+	std::cout << "A Zambie(Raichu) is attacking a Ninja(Caterpie)" << std::endl;
 	n.health -= 25;
 	std::cout << "The ninja took 25 damage. \nHis health is now -> " << n.health << std::endl;
 	z.spirit -= 1;
@@ -51,9 +51,9 @@ int FourthFight(Zambie &z, Ninja &n)
 	return 4;
 }
 
-int FifthFight(Ninja &n, Zambie &z)
+int FifthFight(Yourpokemon &n, YourPokemon &z)
 {
-	std::cout << "A Ninja(wilson) is attacking a Zambie(chris)" << std::endl;
+	std::cout << "A Ninja(Caterpie) is attacking a Zambie(Raichu)" << std::endl;
 	z.health -= 35;
 	std::cout << "The Zambie took 35 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -61,9 +61,9 @@ int FifthFight(Ninja &n, Zambie &z)
 	return 5;
 }
 
-int SixthFight(Ninja &n, Zambie &z)
+int SixthFight(Yourpokemon &n, YourPokemon &z)
 {
-	std::cout << "A Ninja(wilson) is attacking a Zambie(matthew)" << std::endl;
+	std::cout << "A Ninja(Caterpie) is attacking a Zambie(Snorlax)" << std::endl;
 	z.health -= 35;
 	std::cout << "The Zambie took 35 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -71,9 +71,9 @@ int SixthFight(Ninja &n, Zambie &z)
 	return 6;
 }
 
-int SeventhFight(Zambie &z, Ninja &n)
+int SeventhFight(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "A Zambie(matthew) is attacking a Ninja(regi)" << std::endl;
+	std::cout << "A Zambie(Snorlax) is attacking a Ninja(Chairzard)" << std::endl;
 	z.health -= 30;
 	std::cout << "The Ninja took 30 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -81,9 +81,9 @@ int SeventhFight(Zambie &z, Ninja &n)
 	return 7;
 }
 
-int EigthFight(Zambie &z, Ninja &n)
+int EigthFight(YourPokemon &z, Yourpokemon &n)
 {
-	std::cout << "A Zambie(matthew) is attacking a Ninja(wilson)" << std::endl;
+	std::cout << "A Zambie(Snorlax) is attacking a Ninja(Caterpie)" << std::endl;
 	z.health -= 30;
 	std::cout << "The Ninja took 30 damage.\nHis health is now -> " << z.health << std::endl;
 	n.chi -= 1;
@@ -93,116 +93,105 @@ int EigthFight(Zambie &z, Ninja &n)
 
 int main()
 {
-	Zambie chris = { 300, true, 25 };
-	Zambie matthew = { 250, true, 20 };
-	Ninja regi = { 400, true, 15 };
-	Ninja wilson = { 200, true, 30 };
+	YourPokemon Raichu = { 300, true, 25 };
+	YourPokemon Snorlax = { 250, true, 20 };
+	Yourpokemon Charizard = { 400, true, 15 };
+	Yourpokemon Caterpie = { 200, true, 30 };
 	char input = '0';
 
 	while (input != 'q')
 	{
-		std::cout << "The a key lets the Zambie(chris) attack the Ninja(regi). \n" << std::endl;
-		std::cout << "The b key lets the Ninja(regi) attack the Zambie(chris). \n" << std::endl;
-		std::cout << "The c key lets the Ninja(regi) attack the Zambie(matthew). \n" << std::endl;
-		std::cout << "The d key lets the Zambie(chris) attack the Ninja(wilson). \n" << std::endl;
-		std::cout << "The e key lets the Ninja(wilson) attack the Zambie(chris). \n" << std::endl;
-		std::cout << "The f key lets the Ninja(wilson) attack the Zambie(matthew). \n" << std::endl;
-		std::cout << "The g key lets the Zambie(matthew) attack the Ninja(regi). \n" << std::endl;
-		std::cout << "The h key lets the Zambie(matthew) attack the Ninja(wilson). \n" << std::endl;
-
+		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+		std::cout << "Press a, b, c, d, e, f, g, or h to start a fight. \n" << std::endl;
+		std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 		std::cin >> input;
 		if (input == 'a')
 		{
-			std::cout << "CHRIS FIGHTS REGI. " << std::endl;
-			Fight(chris, regi);
+			std::cout << "Raichu FIGHTS Charizard. " << std::endl;
+			Fight(Raichu, Charizard);
 		}
 		if (input == 'b')
 		{
-			std::cout << "REGI FIGHTS CHRIS. " << std::endl;
-			SecondFight(regi, chris);
+			std::cout << "Charizard FIGHTS Raichu. " << std::endl;
+			SecondFight(Charizard, Raichu);
 		}
 		if (input == 'c')
 		{
-			std::cout << "REGI FIGHTS MATTHEW. " << std::endl;
-			TheThirdFight(regi, matthew);
+			std::cout << "Charizard FIGHTS Snorlax. " << std::endl;
+			TheThirdFight(Charizard, Snorlax);
 		}
 		if (input == 'd')
 		{
-			std::cout << "CHRIS FIGHTS WILSON. " << std::endl;
-			FourthFight(chris, wilson);
+			std::cout << "Raichu FIGHTS Caterpie. " << std::endl;
+			FourthFight(Raichu, Caterpie);
 		}
 		if (input == 'e')
 		{
-			std::cout << "WILSON FIGHTS CHRIS. " << std::endl;
-			FifthFight(wilson, chris);
+			std::cout << "Caterpie FIGHTS Raichu. " << std::endl;
+			FifthFight(Caterpie, Raichu);
 		}
 		if (input == 'f')
 		{
-			std::cout << "WILSON FIGHTS MATTHEW. " << std::endl;
-			SixthFight(wilson, matthew);
+			std::cout << "Caterpie FIGHTS Snorlax. " << std::endl;
+			SixthFight(Caterpie, Snorlax);
 		}
 		if (input == 'g')
 		{
-			std::cout << "MATTHEW FIGHTS REGI. " << std::endl;
-			FourthFight(matthew, regi);
+			std::cout << "Snorlax FIGHTS Charizard. " << std::endl;
+			FourthFight(Snorlax, Charizard);
 		}
 		if (input == 'h')
 		{
-			std::cout << "MATTHEW FIGHTS WILSON. " << std::endl;
-			FourthFight(matthew, wilson);
+			std::cout << "Snorlax FIGHTS Caterpie. " << std::endl;
+			FourthFight(Snorlax, Caterpie);
 		}
-		if (regi.health < 1)
+		if (Charizard.health < 1)
 		{
-			printf("wasted.... GAME OVER\n");
-			printf("get guhd lol. \n \a");
+			printf("Charizard Fainted! \n");
 			break;
 		}
-		if (regi.chi < 1)
+		if (Charizard.chi < 1)
 		{
-			printf("Not enough chi. ");
-			printf("You can no longer attack \n \a");
+			printf("Not enough PP. \n");
 			break;
 		}
-		if (wilson.health < 1)
+		if (Caterpie.health < 1)
 		{
-			printf("wasted.... GAME OVER\n");
-			printf("get guhd lol. \n \a");
+			printf("Caterpie Fainted! \n");
 			break;
 		}
-		if (wilson.chi < 1)
+		if (Caterpie.chi < 1)
 		{
-			printf("Not enough chi. ");
-			printf("You can no longer attack \n \a");
+			printf("Not enough PP. ");
 			break;
 		}
-		if (chris.health < 1)
+		if (Raichu.health < 1)
 		{
-			printf("Wasted... GAME OVER\n");
-			printf("get guhd lol \n \a");
+			printf("Raichu Fainted! \n");
 			break;
 		}
-		if (chris.spirit < 1)
+		if (Raichu.spirit < 1)
 		{
-			printf("Not enough spirit. ");
-			printf("You can no longer attack. \n \a");
+			printf("Not enough PP. ");
 			break;
 		}
-		if (matthew.health < 1)
+		if (Snorlax.health < 1)
 		{
-			printf("Wasted... GAME OVER\n");
-			printf("get guhd lol \n \a");
+			printf("Snorlax Fainted! \n");
 			break;
 		}
-		if (matthew.spirit < 1)
+		if (Snorlax.spirit < 1)
 		{
-			printf("Not enough spirit. ");
-			printf("You can no longer attack. \n \a");
+			printf("Not enough PP. ");
 			break;
 		}
 
 		printf("New frame: \n \n");
 	}
-
+	std::cout << "Game over!" << std::endl;
+	std::cout << "Code designer, Matt" << std::endl;
+	std::cout << "#TeachMasterFlex - A.K.A. Matthew(not me)" << std::endl;
+	std::cout << "Special thanks to AIE" << std::endl;
 	system("pause");
 	//how i fight??
 	return 0;
