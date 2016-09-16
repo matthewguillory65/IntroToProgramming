@@ -1,19 +1,19 @@
 #pragma once
+
 using namespace std;
-class Utility
+class MyString
 {
 private:
-	char Example1[255];
-	char Example2[212];
+	char *alright;
 public:
-	Utility() {};
-	Utility(char*);
-	int UtilityLength();
-	int UtilityAccess();
-	int UtilityCompare();
-	int UtilityAppend();
-	int UtilityPrepend();
+	MyString();
+	//This is the default constructor. 
 
+	MyString(char*a);
+	/*This takes the value of the first pointer object and assigns it to the second pointer object 
+	So it takes the pointer object on 'a' and assigns it to the pointer object 'alright'*/
 
+	int MyString::Length();
+	/*This asks for the string's length, and returns how long it is*/
 
 };
