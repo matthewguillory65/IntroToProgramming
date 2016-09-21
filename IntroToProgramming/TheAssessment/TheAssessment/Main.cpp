@@ -5,8 +5,20 @@ using namespace std;
 
 int main()
 {
-	MyString theString = MyString("Start");
-	theString.Length();
+	MyString s = MyString();
+	MyString MyString();
+	s.Length();
+	//MyString.Access();
+	s.Compare();
+	//MyString.Append();
+	//MyString.Prepend();
+	//MyString.Return();
+	//MyString.Lowercase();
+	//MyString.Uppercase();
+	//MyString.FindString();
+	//MyString.FindStringIndex();
+	//MyString.Replace();
+	//MyString.Set();
 
 
 	system("pause");
