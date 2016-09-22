@@ -6,7 +6,6 @@ class MyString
 private:
 	int m_Length;
 	char m_data[90] = "Apples";
-	char m_data2[91] = "Pineapple";
 	char m_String;
 public:
 	MyString() {}
@@ -30,8 +29,8 @@ public:
 	//int MyString::Append();
 	///*Attach one string to another; to the end*/
 
-	//int MyString::Prepend();
-	///*Attach one string to another; */
+	int MyString::Prepend();
+	/*Attach one string to another; */
 
 	//int MyString::Return();
 	///*Returning the string as a basic constant c-style string*/

@@ -8,17 +8,17 @@ int main()
 	MyString s = MyString();
 	MyString MyString();
 	s.Length();
-	//MyString.Access();
+	//s.Access();
 	s.Compare();
-	//MyString.Append();
-	//MyString.Prepend();
-	//MyString.Return();
-	//MyString.Lowercase();
-	//MyString.Uppercase();
-	//MyString.FindString();
-	//MyString.FindStringIndex();
-	//MyString.Replace();
-	//MyString.Set();
+	//s.Append();
+	s.Prepend();
+	//s.Return();
+	//s.Lowercase();
+	//s.Uppercase();
+	//s.FindString();
+	//s.FindStringIndex();
+	//s.Replace();
+	//s.Set();
 
 
 	system("pause");

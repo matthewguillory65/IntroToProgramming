@@ -3,19 +3,19 @@
 
 using namespace std;
 MyString a = MyString();
-//int MyString::String(char *Apples)
-//{
-//	int i;
-//	for (i = 0; Apples[i] != '\0'; ++i)
-//	{
-//		m_data[i] = Apples[i];
-//	}
-//	m_data[i] = '\0';
-//	int m_Length = i;
-//	return 0;
-//}
+int String(char *Apples)
+{
+	int i;
+	for (i = 0; Apples[i] != '\0'; ++i)
+	{
+		m_data[i] = Apples[i];
+	}
+	m_data[i] = '\0';
+	int m_Length = i;
+	return 0;
+}
 
-int MyString::Length()
+int Length()
 {
 	int i = 0;
 	while (m_data[i] != 0)
@@ -27,13 +27,13 @@ int MyString::Length()
 	return i;
 }
 
-//int MyString::Access()
+//int Access()
 //{
 //
 //	return 1;
 //}
 //
-int MyString::Compare()
+int Compare()
 {
 	if (m_data < m_data2)
 	{
@@ -47,8 +47,15 @@ int MyString::Compare()
 	return 0;
 }
 
-//int MyString::Append()
+//int Append()
 //{
 //
 //	return 1;
 //}
+
+int Prepend()
+{
+
+
+	return 1;
+}
