@@ -25,90 +25,79 @@ int MyString::Length() //Gets the length of the string and displays it
 	return i;
 }
 
-char MyString::Access() //Accesses a certain character within the string
+char MyString::Access(int i) //Accesses a certain character within the string
 {
-	int access = 3;
-	char n = m_data[access];
-	return n;
+	return m_data[i];
 }
 
 bool MyString::Compare(MyString a) //Compares 2 strings
 {
 	int i = 0;
-	while (m_data[i] != '\0')
+while (m_data[i] != '\0')
 	{
-		if (m_data[i] < a.m_data[i])
+		if (m_data[i] == a.m_data[i])
 		{
-			cout << m_data << endl;
-			break;
+			int bob = 5 + 3;
+			
+			//Won't run without this for some reason
 		}
-		
-
-		if (m_data[i] > a.m_data[i])
+		else
 		{
-			cout << a.m_data << endl;
-			break;
+			int bobby = 5 + 4;
 		}
-		
-
-		if (m_data[i] = a.m_data[i])
-		{
-			cout << "They are equal" << endl;
-			break;
-		}
-	
+		i++;
 	}
-	return m_data;
+	return false;
 }
 
-char MyString::Append(MyString a) //Puts the first string on the end of the second string
-{
-	cout << m_data << a.m_data << endl;
-	return 0;
-} //Fix
+//char MyString::Append(MyString a) //Puts the first string on the end of the second string
+//{
+//	cout << m_data << a.m_data << endl;
+//	return 0;
+//} //Fix
+//
+//char MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
+//{
+//	cout << a.m_data << m_data << endl;
+//	return 0;
+//} //Fix
 
-char MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
-{
-	cout << a.m_data << m_data << endl;
-	return 0;
-} //Fix
-
-char MyString::Constant() //Returns the string as a basic constant C-Style string
-{
-	
-	return 0;
-}
+//char MyString::Constant() //Returns the string as a basic constant C-Style string
+//{
+//	
+//	return 0;
+//}
 
 //char MyString::Lowercase() //Changes all letters to lowercase
 //{
 //
 //	return 0;
 //}
-//
+
 //char MyString::Uppercase() //Changes all letters to uppercase
 //{
 //
 //	return 0;
 //}
-//
+
 //char MyString::FindSub() //Finds a sub-string within the string class
 //{
 //
 //	return 0;
 //}
-//
+
 //char MyString::CertainSub() //Finds a sub-string within the string class, starting fom a certain index
 //{
 //
 //	return 0;
 //}
-//
+
 //char MyString::Replace() // Bonus //Replace a sub-string found within the string with a different sub-string
 //{
 //
 //	return 0;
 //}
-//
+
 //char MyString::CStyle() //Setting the string to an input C-Style string
 //{
 //

@@ -8,11 +8,11 @@ int main()
 	MyString firststring = MyString("Apple");
 	MyString secondstring = MyString("Seed");
 	cout << firststring.Length() << endl;
-	cout << firststring.Access() << endl;
-	firststring.Compare(secondstring);
-	firststring.Append(secondstring);
-	firststring.Prepend(secondstring);
-	firststring.Constant();
+	cout << firststring.Access(4) << endl;
+	cout << firststring.Compare(secondstring) << endl;
+	//firststring.Append(secondstring);
+	//firststring.Prepend(secondstring);
+	//firststring.Constant();
 	//firststring.Lowercase();
 	//firststring.Uppercase();
 	//firststring.FindSub();
@@ -20,4 +20,5 @@ int main()
 	//firststring.Replace(); //Bonus
 	//firststring.CStyle();
 	system("pause");
+
 }
