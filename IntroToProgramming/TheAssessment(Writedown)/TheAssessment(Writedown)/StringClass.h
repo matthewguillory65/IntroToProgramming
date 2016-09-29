@@ -18,8 +18,16 @@ public:
 
 
 	int Length();
-	/*char Access();*/
+	char Access();
 	bool Compare(MyString a);
-	//char* Append(MyString a);
+	char Append(MyString a);
+	char Prepend(MyString a);
+	char Constant();
+	//char Lowercase();
+	//char Uppercase();
+	//char FindSub();
+	//char CertainSub();
+	//char Replace(); //Bonus
+	//char CStyle();
 };
 
