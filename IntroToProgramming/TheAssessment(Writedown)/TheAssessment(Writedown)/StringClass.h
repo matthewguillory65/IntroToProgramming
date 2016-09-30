@@ -20,8 +20,8 @@ public:
 	int Length();
 	char Access(int i);
 	bool Compare(MyString a);
-	//char Append(MyString a);
-	//char Prepend(MyString a);
+	char Append(MyString a);
+	char Prepend(MyString a);
 	//char Constant();
 	//char Lowercase();
 	//char Uppercase();

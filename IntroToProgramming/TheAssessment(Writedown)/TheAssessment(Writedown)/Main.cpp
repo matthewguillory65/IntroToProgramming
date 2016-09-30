@@ -10,8 +10,8 @@ int main()
 	cout << firststring.Length() << endl;
 	cout << firststring.Access(4) << endl;
 	cout << firststring.Compare(secondstring) << endl;
-	//firststring.Append(secondstring);
-	//firststring.Prepend(secondstring);
+	cout << firststring.Append(secondstring) << endl;
+	firststring.Prepend(secondstring);
 	//firststring.Constant();
 	//firststring.Lowercase();
 	//firststring.Uppercase();

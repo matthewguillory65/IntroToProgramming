@@ -47,20 +47,28 @@ while (m_data[i] != '\0')
 		}
 		i++;
 	}
-	return false;
+	return false; //0 = False
 }
 
-//char MyString::Append(MyString a) //Puts the first string on the end of the second string
-//{
-//	cout << m_data << a.m_data << endl;
-//	return 0;
-//} //Fix
-//
-//char MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
-//{
-//	cout << a.m_data << m_data << endl;
-//	return 0;
-//} //Fix
+char MyString::Append(MyString a) //Puts the first string on the end of the second string
+{
+	char newword[245];
+	int firstlength = Length();
+	int i;
+	for (i = 0; i < a.m_data[i] != '\0'; i++)
+	{
+		m_data[i + firstlength] = a.m_data[i];
+	}
+	
+
+	return ;
+
+}
+
+char MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
+{
+	return 0;
+}
 
 //char MyString::Constant() //Returns the string as a basic constant C-Style string
 //{
