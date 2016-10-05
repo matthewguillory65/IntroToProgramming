@@ -25,7 +25,7 @@ public:
 	//char Constant();
 	//char Lowercase();
 	//char Uppercase();
-	//char FindSub();
+	bool FindSub();
 	//char CertainSub();
 	//char Replace(); //Bonus
 	//char CStyle();

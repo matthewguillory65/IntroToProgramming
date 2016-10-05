@@ -15,7 +15,7 @@ int main()
 	//firststring.Constant();
 	//firststring.Lowercase();
 	//firststring.Uppercase();
-	//firststring.FindSub();
+	cout << firststring.FindSub() << endl; //Returns 1; 1 = true
 	//firststring.CertainSub();
 	//firststring.Replace(); //Bonus
 	//firststring.CStyle();

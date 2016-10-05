@@ -52,15 +52,13 @@ while (m_data[i] != '\0')
 
 //char MyString::Append(MyString a) //Puts the first string on the end of the second string
 //{
-//	cout << m_data << a.m_data << endl;
+//
 //	return 0;
-//} //Fix
 //
 //char MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
 //{
-//	cout << a.m_data << m_data << endl;
+//
 //	return 0;
-//} //Fix
 
 //char MyString::Constant() //Returns the string as a basic constant C-Style string
 //{
@@ -80,11 +78,26 @@ while (m_data[i] != '\0')
 //	return 0;
 //}
 
-//char MyString::FindSub() //Finds a sub-string within the string class
-//{
-//
-//	return 0;
-//}
+bool MyString::FindSub() //Finds a sub-string within the string class
+{
+	char SubString[15] = "ple";
+	int i = 0;
+	for (i; i < SubString[15];)//Looks to see if they are the same
+	{
+		int j = 0;
+		if (m_data == SubString)
+		{
+			while (m_data[i] == SubString[j])
+				i++;
+			j++;
+		}
+		if (m_data != SubString)
+		{
+			return false;
+		}
+	}
+	return true; //1 = true
+}
 
 //char MyString::CertainSub() //Finds a sub-string within the string class, starting fom a certain index
 //{
