@@ -108,12 +108,12 @@ bool MyString::FindSub() //Finds a sub-string within the string class
 }
 char* MyString::CStyle()
 {
-	char string[255];
-	std::cin >> string;
+	char String[255];
+	cin >> String;
 	int i;
-	for (i = 0; string[i] != '\0'; i++)
+	for (i = 0; String[i] != '\0'; i++)
 	{
-		m_data[i] = string[i];
+		m_data[i] = String[i];
 	}
 	m_data[i] = '\0';
 	return m_data;
