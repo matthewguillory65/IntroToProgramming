@@ -35,7 +35,7 @@ bool MyString::Compare(MyString a) //Compares one string to another
 		return false; //It will display the number 0, (0 == false)
 	}
 }
-char* MyString::Append(MyString a) //Puts the first string on the end of the second string
+void MyString::Append(MyString a) //Puts the first string on the end of the second string
 {
 	int i = Length();
 	int l = 0;
@@ -46,9 +46,9 @@ char* MyString::Append(MyString a) //Puts the first string on the end of the sec
 		l++;
 	}
 	m_data[i] = '\0';
-	return m_data;
+
 }
-char* MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
+void MyString::Prepend(MyString a) //Puts the first string on the beginning of the second string
 {
 	int i = Length();
 	int l = 0;
@@ -59,13 +59,12 @@ char* MyString::Prepend(MyString a) //Puts the first string on the beginning of 
 		i++;
 	}
 	m_data[l] = '\0';
-	return m_data;
 }
 char* MyString::Constant() //Returns the string as a basic constant C-Style string
 {
 	return m_data;
 }
-char* MyString::Lowercase() //Changes all letters to lowercase
+MyString MyString::Lowercase() //Changes all letters to lowercase
 {
 	int i = 0;
 	for (i; i < Length(); i++)
@@ -76,10 +75,10 @@ char* MyString::Lowercase() //Changes all letters to lowercase
 			c += 32;
 			m_data[i] = c;
 		}
+		return m_data;
 	}
-	return m_data;
 }
-char* MyString::Uppercase() //Changes all letters to uppercase
+MyString MyString::Uppercase() //Changes all letters to uppercase
 {
 	int d = 0;
 	for (d; d < Length(); d++)

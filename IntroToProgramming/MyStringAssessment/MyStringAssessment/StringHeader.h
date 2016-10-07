@@ -1,7 +1,6 @@
 #pragma once
 
 using namespace std;
-// Makes it to where I don't need to use std in the following: std::cout, std::cin, and/or std::endl;
 class MyString
 {
 private:
@@ -15,11 +14,11 @@ public:
 	int Length();
 	char Access(int i);
 	bool Compare(MyString a);
-	char* Append(MyString a);
-	char* Prepend(MyString a);
+	void Append(MyString a); //Change from pointer return to void
+	void Prepend(MyString a); //Same ^
 	char* Constant();
-	char* Lowercase();
-	char* Uppercase();
+	MyString Lowercase();
+	MyString Uppercase();
 	bool FindSub();
 	char* CStyle();
 };

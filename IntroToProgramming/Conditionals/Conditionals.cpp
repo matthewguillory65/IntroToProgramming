@@ -30,6 +30,7 @@ int main()
 	int num1;
 	int num2;
 	std::cin >> num1 >> num2;
+	std::cout << "The larger number will be displayed first" << std::endl;
 	if (num1 < num2)
 	{
 		std::cout << num2 << std::endl;
@@ -43,10 +44,10 @@ int main()
 
 
 	//Number 3
-	/*int num[5];
+	int num[5];
 	int i = 0;
-	for (int i = 0; i < 100; i++);
-	std::cout << num[i];*/
+	for (i; i < 100; i++);
+	std::cout << num[i];
 
 
 
