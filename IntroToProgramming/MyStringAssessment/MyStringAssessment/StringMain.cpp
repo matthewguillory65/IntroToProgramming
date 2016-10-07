@@ -11,8 +11,8 @@ int main()
 	cout << firststring.Append(secondstring) << endl;
 	cout << secondstring.Prepend(firststring) << endl;
 	cout << firststring.Constant() << endl;
-	//cout << firststring.Lowercase() << endl;
-	//cout << firststring.Uppercase() << endl;
+	cout << firststring.Lowercase() << endl;
+	cout << firststring.Uppercase() << endl;
 	cout << firststring.FindSub() << endl;
 	cout << firststring.CStyle() << endl;
 	system("pause");

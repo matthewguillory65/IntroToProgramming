@@ -61,45 +61,36 @@ char* MyString::Prepend(MyString a) //Puts the first string on the beginning of 
 	m_data[l] = '\0';
 	return m_data;
 }
-char MyString::Constant() //Returns the string as a basic constant C-Style string
+char* MyString::Constant() //Returns the string as a basic constant C-Style string
 {
-	const char constant = m_String;
-	return m_String;
+	return m_data;
 }
-//char MyString::Lowercase() //Changes all letters to lowercase
-//{
-//	int i = 0;
-//	for (i; i < Length(); i++)
-//	{
-//		if (m_data[i] >= 65 && m_data[i] <= 90)
-//		{
-//			char c = m_data[i];
-//			c += 32;
-//			m_data[i] = c;
-//		}
-//		//else if ((int)m_data[i] >= 97 && (int)m_data[i] <= 122)
-//		//{
-//		//	m_data[i];
-//		//}
-//	}
-//	return m_data[i];
-//}
-//char MyString::Uppercase() //Changes all letters to uppercase
-//{
-//	int d = 0;
-//	for (d; d < Length(); d++)
-//	{
-//		if (m_data[d] >= 97 && m_data[d] <= 122)
-//		{
-//			m_data[d] = (int)m_data[d] - 32;
-//		}
-//	//else if (m_data[d] >= 65 && m_data[d] <= 90)
-//	//	{
-//	//		m_data[d];
-//	//	}
-//	}
-//	return m_data[d];
-//}
+char* MyString::Lowercase() //Changes all letters to lowercase
+{
+	int i = 0;
+	for (i; i < Length(); i++)
+	{
+		if (m_data[i] >= 65 && m_data[i] <= 90)
+		{
+			char c = m_data[i];
+			c += 32;
+			m_data[i] = c;
+		}
+	}
+	return m_data;
+}
+char* MyString::Uppercase() //Changes all letters to uppercase
+{
+	int d = 0;
+	for (d; d < Length(); d++)
+	{
+		if (m_data[d] >= 97 && m_data[d] <= 122)
+		{
+			m_data[d] = (int)m_data[d] - 32;
+		}
+	}
+	return m_data;
+}
 bool MyString::FindSub() //Finds a sub-string within the string class
 {
 	char SubString[15] = "ple";
