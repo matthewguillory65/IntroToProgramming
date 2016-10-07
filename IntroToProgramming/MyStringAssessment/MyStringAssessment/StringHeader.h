@@ -14,8 +14,8 @@ public:
 	int Length();
 	char Access(int i);
 	bool Compare(MyString a);
-	void Append(MyString a); //Change from pointer return to void
-	void Prepend(MyString a); //Same ^
+	void Append(MyString a);
+	void Prepend(MyString a);
 	char* Constant();
 	MyString Lowercase();
 	MyString Uppercase();
