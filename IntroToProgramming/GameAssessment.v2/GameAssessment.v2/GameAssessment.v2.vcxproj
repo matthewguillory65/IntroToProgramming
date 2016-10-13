@@ -110,7 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AssessmentFunctions.cpp" />
     <ClCompile Include="AssessmentMain.cpp" />
   </ItemGroup>
   <ItemGroup>
