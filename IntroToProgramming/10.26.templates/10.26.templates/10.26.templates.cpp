@@ -14,8 +14,8 @@ T Min(T a, T b)
 //Description: Returns the higher of the two values
 //Input: Two templates (a, b)
 //Output: The higher of the two values a and b
-template<typename Z>
-Z Max(Z a, Z b)
+template<typename T>
+Z Max(T a, T b)
 {
 	return a > b;
 }
@@ -55,7 +55,7 @@ char Min(char a, char b)
 //Description: As above but first checks if a and b represent alphabetical characters. If so, the functions will return the value that is alphabetically higher
 //Input: Two template arguements(a, b)
 //Output: The alphabetically higher of the two values a and b
-template<typename G>
+template<typename T>
 char Max(char a, char b)
 {
 	return a;
