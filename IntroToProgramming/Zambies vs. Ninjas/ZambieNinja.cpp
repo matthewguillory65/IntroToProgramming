@@ -101,14 +101,14 @@ int main()
 
 	while (input != 'q')
 	{
-		std::cout << "The a key lets the Zambie(chris) attack the Ninja(regi). \n" << std::endl;
-		std::cout << "The b key lets the Ninja(regi) attack the Zambie(chris). \n" << std::endl;
-		std::cout << "The c key lets the Ninja(regi) attack the Zambie(matthew). \n" << std::endl;
-		std::cout << "The d key lets the Zambie(chris) attack the Ninja(wilson). \n" << std::endl;
-		std::cout << "The e key lets the Ninja(wilson) attack the Zambie(chris). \n" << std::endl;
-		std::cout << "The f key lets the Ninja(wilson) attack the Zambie(matthew). \n" << std::endl;
-		std::cout << "The g key lets the Zambie(matthew) attack the Ninja(regi). \n" << std::endl;
-		std::cout << "The h key lets the Zambie(matthew) attack the Ninja(wilson). \n" << std::endl;
+		std::cout << "The a key lets the chris attack the regi. " << std::endl;
+		std::cout << "The b key lets the regi attack the chris. " << std::endl;
+		std::cout << "The c key lets the regi attack the matthew. " << std::endl;
+		std::cout << "The d key lets the chris attack the wilson. " << std::endl;
+		std::cout << "The e key lets the wilson attack the chris. " << std::endl;
+		std::cout << "The f key lets the wilson attack the matthew. " << std::endl;
+		std::cout << "The g key lets the matthew attack the regi. " << std::endl;
+		std::cout << "The h key lets the matthew attack the wilson. " << std::endl;
 
 		std::cin >> input;
 		if (input == 'a')

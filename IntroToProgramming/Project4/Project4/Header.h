@@ -22,21 +22,21 @@ public:
 	//Postcondition: current = node
 	linkedListIterator(nodeType<Type> *node)
 	{
-
+		current = node;
 	}
 
 	//Function to overlaod the dereferencing operator *
 	//Postcondition:Returns the info contained in the node
 	Type operator*()
 	{
-
+		return node;
 	}
 
 	//Overload the pre-increment operator
 	//Postcondition: The iterator is advanced to the next node
 	linkedListIterator<Type> operator++()
 	{
-
+		
 	}
 
 	//Overlaod the equality operator
@@ -44,7 +44,7 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator==(linkedListIterator<Type>& list) const
 	{
-
+		return false;
 	}
 
 	//Overlaod the not equal operator
@@ -52,7 +52,7 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator!=(linkedListIterator<Type>& list) const
 	{
-
+		return false;
 	}
 };
 
@@ -76,35 +76,42 @@ public:
 	//Postcondition: first = NULL, last = NULL, count = 0;
 	void initializeList()
 	{
-
+		first = NULL;
+		last = NULL;
+		count = 0;
 	}
 
 	//Function to determine whether the list is empty
 	//Postcondition: Returns true if the list is empty otherwise it returns false
 	bool isEmptyList() const
 	{
-
+		if (nodeInfo == 0)
+			return true;
+		else
+			return false;
 	}
 
 	//Function to output the data contained in each node
 	//Postcondition: Node
 	void print() const
 	{
-
+		
 	}
 
 	//Function to return the number of nodes in the list
 	//Postcondition: The value of count is returned
 	int length() const
 	{
-
+		return count;
 	}
 
 	//Function to delete all the nodes from the list
 	//Postcondition: first = NULL, last = NULL, count = 0;
 	void destroyList()
 	{
-
+		*first = NULL;
+		last = NULL;
+		count = 0;
 	}
 
 	//Function to return the first element in the list
@@ -113,7 +120,8 @@ public:
 	//the first element of the list is returned
 	Type front() const
 	{
-
+		if (count > 0)
+			return *first.info;
 	}
 
 	//Function to return the last element in the list
@@ -122,7 +130,8 @@ public:
 	//the last element of the list is returned
 	Type back() const
 	{
-
+		if (count > 0)
+			return *last.info;
 	}
 
 	//Function to determine whether node is in the list
@@ -130,7 +139,10 @@ public:
 	//otherwise teh value false is returned
 	bool search(const Type& nodeInfo)
 	{
-
+		if (nodeInfo == 0)
+			return true;
+		else
+			return false;
 	}
 
 	//Function to insert node at the begining of the list
@@ -139,7 +151,9 @@ public:
 	//the list, and count is incremented by 1;
 	void insertFirst(const Type& nodeInfo)
 	{
-
+		nodeInfo.link = first;
+		*first = nodeInfo;
+		count++;
 	}
 
 	//Function to insert node at the end of the list
@@ -148,7 +162,9 @@ public:
 	//the list, and count is incremented by 1;
 	void insertLast(const Type& nodeInfo)
 	{
-
+		nodeInfo.link = last;
+		*last = nodeInfo;
+		count++;
 	}
 
 	//Function to delete node from the list
@@ -156,35 +172,34 @@ public:
 	//the first node, last points to the last node of the update list, and count is decremented by 1
 	void deleteNode(const Type& nodeInfo)
 	{
-
+		
 	}
 
 	//Function to return an iterator at the begining of the linked list
-	//Postcondition: Returns an iteratir such that the current is set to first
+	//Postcondition: Returns an iterator such that the current is set to first
 	linkedListIterator<Type> begin()
 	{
-
+		return first;
 	}
 
 	//Funcion to rturn an iterator at the end of the linked list
 	//Postcondition: Returns an iterator such that current is set to NULL
 	linkedListIterator<Type> end()
 	{
-
+		return last;
 	}
 
 	//Default constructor
 	//Initializes the list to an empty state
 	//Postcondition: first = NULL, last = NULL, count = 0;
-	linkedListType()
-	{
-
-	}
+	linkedListType(){}
 
 	//copy constructor
 	linkedListType(const linkedListType<Type> otherList)
 	{
-
+		first = NULL;
+		last = NULL;
+		count = 0;
 	}
 
 	//deconstructor
