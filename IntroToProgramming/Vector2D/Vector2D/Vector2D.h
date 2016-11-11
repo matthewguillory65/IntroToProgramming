@@ -171,6 +171,7 @@ class Matrix4
 {
 private:
 	float x, y, z, k, l, m, n, o, p, q, r, s, t, u, v, w;
+	float points[16];
 public:
 	Matrix4() {}
 	Matrix4(float xpos, float ypos, float zpos, float kpos, float lpos, float mpos, float npos, float opos, float ppos, float qpos, float rpos, float spos, float tpos, float upos, float vpos, float wpos)
@@ -191,6 +192,17 @@ public:
 		u = upos;
 		v = vpos;
 		w = wpos;
+	}
+
+	Matrix4(float a[])
+	{
+		for (int i = 0; i < 16; i++)
+			points[i] = a[i];
+	}
+
+	Matrix4 operator+(Matrix4 Add)
+	{
+		
 	}
 
 };
