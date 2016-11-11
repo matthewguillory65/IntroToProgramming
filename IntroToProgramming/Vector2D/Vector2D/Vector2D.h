@@ -150,19 +150,21 @@ class Matrix3
 {
 private:
 	float x, y, z, q, r, s, t, u, v;
+	float points[9];
 public:
 	Matrix3() {}
 	Matrix3(float xpos, float ypos, float zpos, float qpos, float rpos, float spos, float tpos, float upos, float vpos)
+	{}
+
+	Matrix3(float a[])
 	{
-		x = xpos;
-		y = ypos;
-		z = zpos;
-		q = qpos;
-		r = rpos;
-		s = spos;
-		t = tpos;
-		u = upos;
-		v = vpos;
+		for (int i = 0; i < 9; i++)
+			points[i] = a[i];
+	}
+
+	Matrix3 operator+(Matrix3 Add)
+	{
+
 	}
 
 };
@@ -175,24 +177,7 @@ private:
 public:
 	Matrix4() {}
 	Matrix4(float xpos, float ypos, float zpos, float kpos, float lpos, float mpos, float npos, float opos, float ppos, float qpos, float rpos, float spos, float tpos, float upos, float vpos, float wpos)
-	{
-		x = xpos;
-		y = ypos;
-		z = zpos;
-		k = kpos;
-		l = lpos;
-		m = mpos;
-		n = npos;
-		o = opos;
-		p = ppos;
-		q = qpos;
-		r = rpos;
-		s = spos;
-		t = tpos;
-		u = upos;
-		v = vpos;
-		w = wpos;
-	}
+	{}
 
 	Matrix4(float a[])
 	{
