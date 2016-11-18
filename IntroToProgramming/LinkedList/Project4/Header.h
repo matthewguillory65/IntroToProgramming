@@ -36,7 +36,8 @@ public:
 	//Postcondition: The iterator is advanced to the next node
 	linkedListIterator<Type> operator++()
 	{
-		
+		node++;
+		return node;
 	}
 
 	//Overlaod the equality operator
@@ -69,6 +70,11 @@ public:
 	//Overload the assignment operator
 	const linkedListType<Type>& operator= (const linkedListType<Type>& otherList)
 	{
+		while (count != NULL)
+		{
+			first->info = otherList first->info;
+		}
+		return first;
 
 	}
 
@@ -95,7 +101,7 @@ public:
 	//Postcondition: Node
 	void print() const
 	{
-		
+		return node;
 	}
 
 	//Function to return the number of nodes in the list
@@ -172,7 +178,7 @@ public:
 	//the first node, last points to the last node of the update list, and count is decremented by 1
 	void deleteNode(const Type& nodeInfo)
 	{
-		
+		return i--;
 	}
 
 	//Function to return an iterator at the begining of the linked list
@@ -195,7 +201,7 @@ public:
 	linkedListType(){}
 
 	//copy constructor
-	linkedListType(const linkedListType<Type> otherList)
+	linkedListType(const linkedListType<Type>& otherList)
 	{
 		first = NULL;
 		last = NULL;

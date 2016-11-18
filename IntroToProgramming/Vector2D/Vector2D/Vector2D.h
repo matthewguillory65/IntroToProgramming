@@ -7,7 +7,8 @@ private:
 public:
 	Vector2D() {}
 
-	Vector2D(float xpos, float ypos) {
+	Vector2D(float xpos, float ypos)
+	{
 		x = xpos, y = ypos;
 	}
 
@@ -36,7 +37,8 @@ private:
 public:
 	Vector3D() {}
 
-	Vector3D(float xpos, float ypos, float zpos) {
+	Vector3D(float xpos, float ypos, float zpos)
+	{
 		x = xpos, y = ypos, z = zpos;
 	}
 
