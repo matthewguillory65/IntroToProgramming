@@ -35,6 +35,7 @@ private:
 	float x, y, z;
 public:
 	Vector3D() {}
+
 	Vector3D(float xpos, float ypos, float zpos) {
 		x = xpos, y = ypos, z = zpos;
 	}
@@ -66,6 +67,7 @@ private:
 	float w, x, y, z;
 public:
 	Vector4D() {}
+
 	Vector4D(float wpos, float xpos, float ypos, float zpos)
 	{
 		w = wpos, x = xpos, y = ypos, z = zpos;
@@ -92,29 +94,25 @@ public:
 class Matrix2
 {
 private:
-	float w, x, y, z;
+	float x1, x2, y1, y2;
 public:
 	Matrix2() {}
-	Matrix2(float wpos, float xpos, float ypos, float zpos)
+	Matrix2(float x1, float x2, float y1, float y2)
 	{
-		w = wpos, x = xpos, y = ypos, z = zpos;
+		x1 = 3, x2 = 4, y1 = 5, y2 = 6;
 	}
 
-	Matrix2 operator*(Matrix2 Mult)
-	{
-		(w, x) * (y, z) == w * y, w * z, x * y, x * z;
-	}
-
+	Matrix2 operator*(Matrix2 Mult);
 };
 
 class Matrix3
 {
 private:
-	float x, y, z, q, r, s, t, u, v;
+	float m1, m2, m3, m4, m5, m6, m7, m8, m9;
 	float points[9];
 public:
 	Matrix3() {}
-	Matrix3(float xpos, float ypos, float zpos, float qpos, float rpos, float spos, float tpos, float upos, float vpos)
+	Matrix3(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9)
 	{}
 
 	Matrix3(float a[])
@@ -123,21 +121,17 @@ public:
 			points[i] = a[i];
 	}
 
-	Matrix3 operator+(Matrix3 Add)
-	{
-
-	}
-
+	Matrix3 operator*(Matrix3 Mult);
 };
 
 class Matrix4
 {
 private:
-	float x, y, z, k, l, m, n, o, p, q, r, s, t, u, v, w;
+	float m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16;
 	float points[16];
 public:
 	Matrix4() {}
-	Matrix4(float xpos, float ypos, float zpos, float kpos, float lpos, float mpos, float npos, float opos, float ppos, float qpos, float rpos, float spos, float tpos, float upos, float vpos, float wpos)
+	Matrix4(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9, float m10, float m11, float m12, float m13, float m14, float m15, float m16)
 	{}
 
 	Matrix4(float a[])
@@ -146,9 +140,5 @@ public:
 			points[i] = a[i];
 	}
 
-	Matrix4 operator+(Matrix4 Add)
-	{
-		
-	}
-
+	Matrix4 operator*(Matrix4 Mult);
 };
