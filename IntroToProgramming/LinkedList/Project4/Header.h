@@ -29,7 +29,15 @@ public:
 	//Postcondition:Returns the info contained in the node
 	Type operator*()
 	{
-		return node;
+		if (current == NULL)
+		{
+			return NULL;
+		}
+
+		else
+		{
+			return node;
+		}
 	}
 
 	//Overload the pre-increment operator
@@ -45,7 +53,10 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator==(linkedListIterator<Type>& list) const
 	{
-		return false;
+		if (list.current == current)
+			return false;
+		else
+			return true;
 	}
 
 	//Overlaod the not equal operator
@@ -53,7 +64,10 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator!=(linkedListIterator<Type>& list) const
 	{
-		return false;
+		if (list.current != current)
+			return false;
+		else
+			return true;
 	}
 };
 
@@ -91,7 +105,7 @@ public:
 	//Postcondition: Returns true if the list is empty otherwise it returns false
 	bool isEmptyList() const
 	{
-		if (nodeInfo == 0)
+		if (*first.info == 0)
 			return true;
 		else
 			return false;
@@ -145,7 +159,7 @@ public:
 	//otherwise teh value false is returned
 	bool search(const Type& nodeInfo)
 	{
-		if (nodeInfo == 0)
+		if (nodeInfo == *first.info)
 			return true;
 		else
 			return false;

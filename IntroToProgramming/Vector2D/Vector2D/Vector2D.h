@@ -21,10 +21,10 @@ public:
 	Vector2D operator*(Vector2D Mult);
 
 
-	Vector2D Magnitude(Vector2D Mag);
+	Vector2D Magnitude();
 
 
-	Vector2D Normalize(Vector2D Nor);
+	Vector2D Normalize();
 
 
 	Vector2D Dot(Vector2D Dot);
@@ -51,10 +51,10 @@ public:
 	Vector3D operator*(Vector3D Mult);
 
 
-	Vector3D Magnitude(Vector3D Mag);
+	Vector3D Magnitude();
 
 
-	Vector3D Normalize(Vector3D Nor);
+	Vector3D Normalize();
 
 
 	Vector3D Dot(Vector3D Dot);
@@ -84,10 +84,10 @@ public:
 	Vector4D operator*(Vector4D Mult);
 
 
-	Vector4D Magnitude(Vector4D Mag);
+	Vector4D Magnitude();
 
 
-	Vector4D Normalize(Vector4D Nor);
+	Vector4D Normalize();
 
 
 	Vector4D Dot(Vector4D Dot);

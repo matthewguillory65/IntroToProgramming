@@ -29,19 +29,17 @@ Vector2D Vector2D::operator* (Vector2D Mult)
 	return C;
 }
 
-Vector2D Vector2D::Magnitude(Vector2D Mag)
+Vector2D Vector2D::Magnitude()
 {
 	Vector2D D;
-	D.x = sqrt((x * Mag.x) + (y * Mag.y));
+	D.x = sqrt(x * x + y * y);
 	return D;
 }
 
-Vector2D Vector2D::Normalize(Vector2D Nor)
+Vector2D Vector2D::Normalize()
 {
-	Vector2D E;
-	E.x = x / Nor.x;
-	E.y = y / Nor.y;
-	return E;
+	Vector2D tmp = Vector2D(x / Vector2D::Magnitude().x, y / Vector2D::Magnitude().y);
+	return tmp;
 }
 
 Vector2D Vector2D::Dot(Vector2D Dot)
@@ -80,20 +78,17 @@ Vector3D Vector3D::operator* (Vector3D Mult)
 	return C;
 }
 
-Vector3D Vector3D::Magnitude(Vector3D Mag)
+Vector3D Vector3D::Magnitude()
 {
 	Vector3D D;
-	D.x = sqrt((x * Mag.x) + (y * Mag.y) + (z + Mag.z));
+	D.x = sqrt(x * x + y * y + z * z);
 	return D;
 }
 
-Vector3D Vector3D::Normalize(Vector3D Nor)
+Vector3D Vector3D::Normalize()
 {
-	Vector3D E;
-	E.x = x / Nor.x;
-	E.y = y / Nor.y;
-	E.z = z / Nor.z;
-	return E;
+	Vector3D tmp = Vector3D(x / Vector3D::Magnitude().x, y / Vector3D::Magnitude().y, z / Vector3D::Magnitude().z);
+	return tmp;
 }
 
 Vector3D Vector3D::Dot(Vector3D Dot)
@@ -143,21 +138,17 @@ Vector4D Vector4D::operator* (Vector4D Mult)
 	return Vector4D(x * Mult.x, y * Mult.y, z * Mult.z, w * Mult.w);
 }
 
-Vector4D Vector4D::Magnitude(Vector4D Mag)
+Vector4D Vector4D::Magnitude()
 {
 	Vector4D D;
-	D.x = sqrt((x * Mag.x) + (y * Mag.y) + (z * Mag.z) + (w * Mag.w));
+	D.x = sqrt(x * x + y * y + z * z + w * w);
 	return D;
 }
 
-Vector4D Vector4D::Normalize(Vector4D Nor)
+Vector4D Vector4D::Normalize()
 {
-	Vector4D E;
-	E.x = x / Nor.x;
-	E.y = y / Nor.y;
-	E.z = z / Nor.z;
-	E.w = w / Nor.w;
-	return E;
+	Vector4D tmp = Vector4D(x / Vector4D::Magnitude().x, y / Vector4D::Magnitude().y, z / Vector4D::Magnitude().z, w / Vector4D::Magnitude().w);
+	return tmp;
 }
 
 Vector4D Vector4D::Dot(Vector4D Dot)
@@ -233,52 +224,3 @@ int main()
 {
 	return 0;
 }
-
-
-
-//
-//struct nodeType
-//{
-//	nodeType() {}
-//	int info;
-//	nodeType * link;
-//};
-//
-//int main()
-//{	
-//	nodeType *a = new nodeType();
-//	nodeType *b = new nodeType();
-//	nodeType *c = new nodeType();
-//	a->info = 0;
-//	b->info = 2;
-//	c->info = 4;
-//
-//	c->link = b;
-//	b->link = a;
-//
-//	nodeType * head = c;
-//	while (head != nullptr)
-//	{
-//		cout << head->info; //Here it's going to say "Exception thrown: read access violation", just click break, go to the bottom and open the window.
-//		head = head->link;
-//	}
-//	
-//	
-//	//a.link = head;
-//	//Vector2D Bob = Vector2D(2, 7);
-//	//Vector2D Joe = Vector2D(2, 7);
-//	//Vector2D Add(2, 7);
-//	//assert(Bob + Joe == Vector2D(4, 14));
-//	////Vector2D Subtract(2, 7);
-//	////assert(2 - 7 == -5);
-//	////Vector2D ScalarMult(5.0f, 9.0f);
-//	////assert(5.0f * 9.0f == 45.0f);
-//	////Vector3D Adds(2, 7, 8);
-//	////assert(2 + 7 + 8 == 17);
-//	////Vector3D Subtracts(4, 6, 8);
-//	////assert(4 - 6 - 8 == -10);
-//	////Vector3D ScalarMults(3.0f, 7.0f, 9.0f);
-//	////assert(3.0f * 7.0f * 9.0f == 189.0f);
-//	system("pause");
-//	return 0;
-//}
