@@ -1,5 +1,11 @@
 #pragma once
 
+using namespace std;
+//Matthew Guillory
+//Student code: MG1149
+
+
+
 //Needs to have: Point, Rectangle, Circle, Line, and Triangle.
 //All shapes need to have a common base class called: BaseShape.
 //BaseShape needs to define a pure virtual function called : void DebugPrint()
@@ -10,94 +16,113 @@
 
 class BaseShape//This will be the common base class
 {
-private:
-	
-
 public:
-
-	float x, y;
 	BaseShape() {}
-	BaseShape(float xpos, float ypos)
-	{
-		x = xpos, y = ypos;
-	}
-
+protected:
 	virtual void DebugPrint() = 0;
 };
 
 class Point : public BaseShape //Will display a point on a grid
 {
-	int posa = (x = 1, y = 1);//only point
-
+public:
+	virtual void DebugPrint()
+	{
+		cout << "This is a point: \n" << m_x << ", " << m_y << endl;
+	}
 	Point() {}//Default constructor
 	//Defined: A single spot/dot on a grid
-	void DebugPrint()
+	Point(float x, float y)
 	{
-		
+		m_x = x;
+		m_y = y;
+
+
 	}
+	float m_x;
+	float m_y;
 
 
 };
 
 class Rectangle : public BaseShape //Will display a rectangle on a grid
 {
-	int posa = (x = 1, y = 1);//first point
-	int posb = (x = 3, y = 1);//second point
-	int posc = (x = 3, y = 5);//third point
-	int posd = (x = 1, y = 5);//fourth point
+public:
+	virtual void DebugPrint()
+	{
 
+	}
 	Rectangle() {}//Default constructor
 	//Defined: 4 sides, opposite sides are always equal, but adjacent sides
 	//are not
-	void DebugPrint()
+	Rectangle(float x, float y)
 	{
-	
+		m_x = x;
+		m_y = y;
 	}
-
+private:
+	float m_x;
+	float m_y;
 
 };
 
 class Circle : public BaseShape //Will display a cirlce on a grid
 {
-	int posa = (x = 0, y = 0);//Center
+public:
+	virtual void DebugPrint()
+	{
 
+	}
 	Circle() {}//Default constructor
 	//Defined: No edges, no corners, round
-	void DebugPrint()
+	Circle(float x, float y)
 	{
-		
+		m_x = x;
+		m_y = y;
 	}
+private:
+	float m_x;
+	float m_y;
 
 };
 
 class Line : public BaseShape //Will display a line on a grid
 {
-	int posa = (x = 1, y = 1);//first point
-	int posb = (x = 1, y = 3);//second point
-
+public:
+	virtual void DebugPrint()
+	{
+		cout << m_x << ", " << m_y << endl;
+	}
 	Line() {}//Default constructor
 	//Defined: from one point to another
-	void DebugPrint()
+	
+	Line(Point x, Point y)
 	{
-		
+		m_x = x;
+		m_y = y;
 	}
+private:
+	Point m_x;
+	Point m_y;
 
 
 };
 
 class Triangle : public BaseShape //Will display a triangle on a grid
 {
-	int posa = (x = 1, y = 1);//first point
-	int posb = (x = 2, y = 2);//second point
-	int posc = (x = 3, y = 1);//third point
+public:
+	virtual void DebugPrint()
+	{
 
+	}
 	Triangle() {}//Default constructor
 	//Defined: 3 points, all connected to make a closed shape, sides can all be 
 	//different sizes
-	void DebugPrint()
+	Triangle(float x, float y)
 	{
-		
+		m_x = x;
+		m_y = y;
 	}
-
-
+private:
+	float m_x;
+	float m_y;
 };

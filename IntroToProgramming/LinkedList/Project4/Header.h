@@ -1,5 +1,9 @@
 #pragma once
 
+//Matthew Guillory
+//Student code: MG1149
+
+
 template<typename Type>
 struct nodeType
 {

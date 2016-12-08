@@ -2,6 +2,9 @@
 #include "Vector2D.h"
 #include <cassert>
 
+//Matthew Guillory
+//Student code: MG1149
+
 using namespace std;
 void Vector2DWork() {}
 
