@@ -57,7 +57,7 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator==(linkedListIterator<Type>& list) const
 	{
-		if (list.current == current)
+		if (list.current.info == current.info)
 			return false;
 		else
 			return true;
@@ -68,7 +68,7 @@ public:
 	//iterator specified by right otherwise returns false
 	bool operator!=(linkedListIterator<Type>& list) const
 	{
-		if (list.current != current)
+		if (list.current.info != current.info)
 			return false;
 		else
 			return true;
@@ -83,6 +83,8 @@ protected:
 	int count; //variable to store the number of elements in the list
 	nodeType<Type> *first; //pointer to the first node of the list
 	nodeType<Type> *last; //pointer to the last node of the list
+
+	linkedListType() {}
 
 public:
 	//Overload the assignment operator
