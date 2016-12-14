@@ -8,28 +8,19 @@
 using namespace std;
 void Vector2DWork() {}
 
-Vector2D Vector2D::operator+ (Vector2D Add)
+Vector2D Vector2D::operator+ (Vector2D RHS)
 {
-	Vector2D A;
-	A.x = x + Add.x;
-	A.y = y + Add.y;
-	return A;
+	return Vector2D(x + RHS.x, y + RHS.y);
 }
 
-Vector2D Vector2D::operator- (Vector2D sub)
+Vector2D Vector2D::operator- (Vector2D RHS)
 {
-	Vector2D B;
-	B.x = x - sub.x;
-	B.y = y - sub.y;
-	return B;
+	return Vector2D(x - RHS.x, y - RHS.y);
 }
 
-Vector2D Vector2D::operator* (Vector2D Mult)
+Vector2D Vector2D::operator* (Vector2D RHS)
 {
-	Vector2D C;
-	C.x = x * Mult.x;
-	C.y = y * Mult.y;
-	return C;
+	return Vector2D(x * RHS.x, y * RHS.y);
 }
 
 Vector2D Vector2D::Magnitude()
@@ -41,8 +32,7 @@ Vector2D Vector2D::Magnitude()
 
 Vector2D Vector2D::Normalize()
 {
-	Vector2D tmp = Vector2D(x / Vector2D::Magnitude().x, y / Vector2D::Magnitude().y);
-	return tmp;
+	return Vector2D(x / Vector2D::Magnitude().x, y / Vector2D::Magnitude().y);
 }
 
 Vector2D Vector2D::Dot(Vector2D Dot)
@@ -54,31 +44,19 @@ Vector2D Vector2D::Dot(Vector2D Dot)
 
 
 
-Vector3D Vector3D::operator+ (Vector3D Add)
+Vector3D Vector3D::operator+ (Vector3D RHS)
 {
-	Vector3D A;
-	A.x = x + Add.x;
-	A.y = y + Add.y;
-	A.z = z + Add.z;
-	return A;
+	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
 }
 
-Vector3D Vector3D::operator- (Vector3D sub)
+Vector3D Vector3D::operator- (Vector3D RHS)
 {
-	Vector3D B;
-	B.x = x - sub.x;
-	B.y = y - sub.y;
-	B.z = z - sub.z;
-	return B;
+	return Vector3D(x - RHS.x, y - RHS.y, z - RHS.z);
 }
 
-Vector3D Vector3D::operator* (Vector3D Mult)
+Vector3D Vector3D::operator* (Vector3D RHS)
 {
-	Vector3D C;
-	C.x = x + Mult.x;
-	C.y = y + Mult.y;
-	C.z = z + Mult.z;
-	return C;
+	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
 }
 
 Vector3D Vector3D::Magnitude()
@@ -90,8 +68,7 @@ Vector3D Vector3D::Magnitude()
 
 Vector3D Vector3D::Normalize()
 {
-	Vector3D tmp = Vector3D(x / Vector3D::Magnitude().x, y / Vector3D::Magnitude().y, z / Vector3D::Magnitude().z);
-	return tmp;
+	return Vector3D(x / Vector3D::Magnitude().x, y / Vector3D::Magnitude().y, z / Vector3D::Magnitude().z);
 }
 
 Vector3D Vector3D::Dot(Vector3D Dot)
@@ -112,33 +89,19 @@ Vector3D Vector3D::Cross(Vector3D Cro)
 
 
 
-Vector4D Vector4D::operator+ (Vector4D Add)
+Vector4D Vector4D::operator+ (Vector4D RHS)
 {
-	Vector4D A;
-	A.w = w + Add.w;
-	A.x = x + Add.x;
-	A.y = y + Add.y;
-	A.z = z + Add.z;
-	return Vector4D(x + Add.x, y + Add.y, z + Add.z, w + Add.w);
+	return Vector4D(x + RHS.x, y + RHS.y, z + RHS.z, w + RHS.w);
 }
 
-Vector4D Vector4D::operator- (Vector4D sub)
+Vector4D Vector4D::operator- (Vector4D RHS)
 {
-	Vector4D B;
-	B.w = w - sub.w;
-	B.x = x - sub.x;
-	B.y = y - sub.y;		B.z = z - sub.z;
-	return Vector4D(x - sub.x, y - sub.y, z - sub.z, w - sub.w);
+	return Vector4D(x - RHS.x, y - RHS.y, z - RHS.z, w - RHS.w);
 }
 
-Vector4D Vector4D::operator* (Vector4D Mult)
+Vector4D Vector4D::operator* (Vector4D RHS)
 {
-	Vector4D C;
-	C.w = w * Mult.w;
-	C.x = x * Mult.x;
-	C.y = y * Mult.y;
-	C.z = z * Mult.z;
-	return Vector4D(x * Mult.x, y * Mult.y, z * Mult.z, w * Mult.w);
+	return Vector4D(x * RHS.x, y * RHS.y, z * RHS.z, w * RHS.w);
 }
 
 Vector4D Vector4D::Magnitude()

@@ -12,13 +12,13 @@ public:
 		x = xpos, y = ypos;
 	}
 
-	Vector2D operator+(Vector2D Add);
+	Vector2D operator+(Vector2D RHS);
 
 
-	Vector2D operator-(Vector2D sub);
+	Vector2D operator-(Vector2D RHS);
 
 
-	Vector2D operator*(Vector2D Mult);
+	Vector2D operator*(Vector2D RHS);
 
 
 	Vector2D Magnitude();
@@ -42,13 +42,13 @@ public:
 		x = xpos, y = ypos, z = zpos;
 	}
 
-	Vector3D operator+(Vector3D Add);
+	Vector3D operator+(Vector3D RHS);
 
 
-	Vector3D operator-(Vector3D sub);
+	Vector3D operator-(Vector3D RHS);
 
 
-	Vector3D operator*(Vector3D Mult);
+	Vector3D operator*(Vector3D RHS);
 
 
 	Vector3D Magnitude();
@@ -75,13 +75,13 @@ public:
 		w = wpos, x = xpos, y = ypos, z = zpos;
 	}
 
-	Vector4D operator+(Vector4D Add);
+	Vector4D operator+(Vector4D RHS);
 
 
-	Vector4D operator-(Vector4D sub);
+	Vector4D operator-(Vector4D RHS);
 
 
-	Vector4D operator*(Vector4D Mult);
+	Vector4D operator*(Vector4D RHS);
 
 
 	Vector4D Magnitude();
