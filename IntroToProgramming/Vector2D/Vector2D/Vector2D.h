@@ -96,15 +96,21 @@ public:
 class Matrix2
 {
 private:
-	float x1, x2, y1, y2;
+	float m1, m2, m3, m4;
+	float points[4];
 public:
 	Matrix2() {}
-	Matrix2(float x1, float x2, float y1, float y2)
+	Matrix2(float a[])
 	{
-		x1 = 3, x2 = 4, y1 = 5, y2 = 6;
+		for (int i = 0; i < 4; i++)
+			points[i] = a[i];
 	}
 
 	Matrix2 operator*(Matrix2 Mult);
+
+	Matrix2 RotateX(float angle) const;
+
+	Matrix2 RotateY(float angle) const;
 };
 
 class Matrix3
@@ -114,16 +120,24 @@ private:
 	float points[9];
 public:
 	Matrix3() {}
-	Matrix3(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9)
-	{}
-
 	Matrix3(float a[])
 	{
 		for (int i = 0; i < 9; i++)
 			points[i] = a[i];
 	}
 
+	Matrix3(float a, float b, float c, float d, float e, float f, float g, float h, float i)
+	{
+		m1 = a, m2 = b, m3 = c, m4 = d, m5 = e, m6 = f, m7 = g, m8 = h, m9 = i;
+	}
+
 	Matrix3 operator*(Matrix3 Mult);
+
+	Matrix3 RotateX(float angle) const;
+
+	Matrix3 RotateY(float angle) const;
+
+	Matrix3 RotateZ(float angle) const;
 };
 
 class Matrix4
@@ -133,14 +147,22 @@ private:
 	float points[16];
 public:
 	Matrix4() {}
-	Matrix4(float m1, float m2, float m3, float m4, float m5, float m6, float m7, float m8, float m9, float m10, float m11, float m12, float m13, float m14, float m15, float m16)
-	{}
-
 	Matrix4(float a[])
 	{
 		for (int i = 0; i < 16; i++)
 			points[i] = a[i];
 	}
 
+	Matrix4(float a, float b, float c, float d, float e, float f, float g, float h, float i, float j, float k, float l, float m, float n, float o, float p)
+	{
+		m1 = a, m2 = b, m3 = c, m4 = d, m5 = e, m6 = f, m7 = g, m8 = h, m9 = i, m10 = j, m11 = k, m12 = l, m13 = m, m14 = n, m15 = o, m16 = p;
+	}
+
 	Matrix4 operator*(Matrix4 Mult);
+
+	Matrix4 RotateX(float angle) const;
+
+	Matrix4 RotateY(float angle) const;
+
+	Matrix4 RotateZ(float angle) const;
 };

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vector2D.h"
 #include <cassert>
+#include <math.h>
 
 //Matthew Guillory
 //Student code: MG1149
@@ -8,34 +9,34 @@
 using namespace std;
 void Vector2DWork() {}
 
-Vector2D Vector2D::operator+ (Vector2D RHS)
+Vector2D Vector2D::operator+ (Vector2D RHS)//Adding Vectors
 {
 	return Vector2D(x + RHS.x, y + RHS.y);
 }
 
-Vector2D Vector2D::operator- (Vector2D RHS)
+Vector2D Vector2D::operator- (Vector2D RHS)//Subtracting Vectors
 {
 	return Vector2D(x - RHS.x, y - RHS.y);
 }
 
-Vector2D Vector2D::operator* (Vector2D RHS)
+Vector2D Vector2D::operator* (Vector2D RHS)//Multiplying Vectors
 {
 	return Vector2D(x * RHS.x, y * RHS.y);
 }
 
-Vector2D Vector2D::Magnitude()
+Vector2D Vector2D::Magnitude()//Multiplying the x by the x, the y by the y, then adding the two, then getting the square root
 {
 	Vector2D D;
 	D.x = sqrt(x * x + y * y);
 	return D;
 }
 
-Vector2D Vector2D::Normalize()
+Vector2D Vector2D::Normalize()//Dividing x by the magnitude of x, and dividing y by the magnitude of y
 {
 	return Vector2D(x / Vector2D::Magnitude().x, y / Vector2D::Magnitude().y);
 }
 
-Vector2D Vector2D::Dot(Vector2D Dot)
+Vector2D Vector2D::Dot(Vector2D Dot)//The sum of x times x, plus y times y
 {
 	Vector2D F;
 	F.x = (x * Dot.x) + (y * Dot.y);
@@ -44,41 +45,41 @@ Vector2D Vector2D::Dot(Vector2D Dot)
 
 
 
-Vector3D Vector3D::operator+ (Vector3D RHS)
+Vector3D Vector3D::operator+ (Vector3D RHS)//Adding Vectors
 {
 	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
 }
 
-Vector3D Vector3D::operator- (Vector3D RHS)
+Vector3D Vector3D::operator- (Vector3D RHS)//Subtracting Vectors
 {
 	return Vector3D(x - RHS.x, y - RHS.y, z - RHS.z);
 }
 
-Vector3D Vector3D::operator* (Vector3D RHS)
+Vector3D Vector3D::operator* (Vector3D RHS)//Multiplying Vectors
 {
 	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
 }
 
-Vector3D Vector3D::Magnitude()
+Vector3D Vector3D::Magnitude()//Multiplying the x by the x, the y by the y, and the x by the z, adding the three, then getting the square root
 {
 	Vector3D D;
 	D.x = sqrt(x * x + y * y + z * z);
 	return D;
 }
 
-Vector3D Vector3D::Normalize()
+Vector3D Vector3D::Normalize()//Dividing x by the magnitude of x, dividing y by the magnitude of y, and dividing the z by the magnitude of z
 {
 	return Vector3D(x / Vector3D::Magnitude().x, y / Vector3D::Magnitude().y, z / Vector3D::Magnitude().z);
 }
 
-Vector3D Vector3D::Dot(Vector3D Dot)
+Vector3D Vector3D::Dot(Vector3D Dot)//The sum of x times x, y times y, and z times z
 {
 	Vector3D F;
 	F.x = (x * Dot.x) + (y * Dot.y) + (z * Dot.z);
 	return F;
 }
 
-Vector3D Vector3D::Cross(Vector3D Cro)
+Vector3D Vector3D::Cross(Vector3D Cro)//Cross multiplication between 3 Vectors
 {
 	Vector3D G;
 	G.x = (y * Cro.z) - (z * Cro.y);
@@ -89,35 +90,35 @@ Vector3D Vector3D::Cross(Vector3D Cro)
 
 
 
-Vector4D Vector4D::operator+ (Vector4D RHS)
+Vector4D Vector4D::operator+ (Vector4D RHS)//Adding Vectors
 {
 	return Vector4D(x + RHS.x, y + RHS.y, z + RHS.z, w + RHS.w);
 }
 
-Vector4D Vector4D::operator- (Vector4D RHS)
+Vector4D Vector4D::operator- (Vector4D RHS)//Subtracting Vectors
 {
 	return Vector4D(x - RHS.x, y - RHS.y, z - RHS.z, w - RHS.w);
 }
 
-Vector4D Vector4D::operator* (Vector4D RHS)
+Vector4D Vector4D::operator* (Vector4D RHS)//Multiplying Vectors
 {
 	return Vector4D(x * RHS.x, y * RHS.y, z * RHS.z, w * RHS.w);
 }
 
-Vector4D Vector4D::Magnitude()
+Vector4D Vector4D::Magnitude()//x times x, plus, y times y, plus, z times z, plus, w times w, then square root
 {
 	Vector4D D;
 	D.x = sqrt(x * x + y * y + z * z + w * w);
 	return D;
 }
 
-Vector4D Vector4D::Normalize()
+Vector4D Vector4D::Normalize()//x divided by the magnitude of x, y divided by the magnitude of y, z divided by the magnitude of z, w divided by the magnitude of w
 {
 	Vector4D tmp = Vector4D(x / Vector4D::Magnitude().x, y / Vector4D::Magnitude().y, z / Vector4D::Magnitude().z, w / Vector4D::Magnitude().w);
 	return tmp;
 }
 
-Vector4D Vector4D::Dot(Vector4D Dot)
+Vector4D Vector4D::Dot(Vector4D Dot)//the sum of, x times x, y times y, z times z, and w times w
 {
 	Vector4D F;
 	F.x = (x * Dot.x) + (y * Dot.y) + (z * Dot.z) + (w * Dot.w);
@@ -126,19 +127,20 @@ Vector4D Vector4D::Dot(Vector4D Dot)
 
 
 
-Matrix2 Matrix2::operator*(Matrix2 Mult)
+Matrix2 Matrix2::operator*(Matrix2 Mult)//Multiplying Matrices
 {
 	Matrix2 tmp;
 
-	tmp.x1 = x1 * x1 + x2 * y1;
-	tmp.x2 = x1 * x2 + x2 * y2;
-	tmp.y1 = y1 * x1 + y2 * x2;
-	tmp.y2 = y1 * x2 + y2 * y2;
+	tmp.m1 = m1 * m1 + m2 * m3;
+	tmp.m2 = m1 * m2 + m2 * m4;
+	tmp.m3 = m3 * m1 + m4 * m2;
+	tmp.m4 = m3 * m2 + m4 * m4;
 
 	return tmp;
 }
 
-Matrix3 Matrix3::operator*(Matrix3 Mult)
+
+Matrix3 Matrix3::operator*(Matrix3 Mult)//Multiplying Matrices
 {
 	Matrix3 tmp;
 
@@ -157,7 +159,44 @@ Matrix3 Matrix3::operator*(Matrix3 Mult)
 	return tmp;
 }
 
-Matrix4 Matrix4::operator*(Matrix4 Mult)
+Matrix3 Matrix3::RotateX(float angle) const//Rotating Matrice3D on the X-axis
+{
+	Matrix3 tmp;
+
+	if (angle == 90.0f)
+	{
+		Matrix3 RotateMatrix = Matrix3(1, 0, 0, 0, 1, 0, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
+
+Matrix3 Matrix3::RotateY(float angle) const//Rotating Matrice3D on the Y-axis
+{
+	Matrix3 tmp;
+
+	if (angle == -90.0f)
+	{
+		Matrix3 RotateMatrix = Matrix3(0, 0, -1, 0, 0, 1, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
+
+Matrix3 Matrix3::RotateZ(float angle) const//Rotating Matrice3D on the Z-axis
+{
+	Matrix3 tmp;
+
+	if (angle == 90)
+	{
+		Matrix3 RotateMatrix = Matrix3(0, -1, 0, 1, 0, 0, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
+
+
+Matrix4 Matrix4::operator*(Matrix4 Mult)//Multiplying Matrices
 {
 	Matrix4 tmp;
 
@@ -184,9 +223,45 @@ Matrix4 Matrix4::operator*(Matrix4 Mult)
 	return tmp;
 }
 
+Matrix4 Matrix4::RotateX(float angle) const//Rotating Matrice4D on the X-axis
+{
+	Matrix4 tmp;
+
+	if (angle == -90.0f)
+	{
+		Matrix4 RotateMatrix = Matrix4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
+
+Matrix4 Matrix4::RotateY(float angle) const//Rotating Matrice4D on the Y-axis
+{
+	Matrix4 tmp;
+
+	if (angle == -90.0f)
+	{
+		Matrix4 RotateMatrix = Matrix4(0, 0, 0, -1, 0, 0, 0, 1, 0, 0,  0, 1, 0, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
+
+Matrix4 Matrix4::RotateZ(float angle) const//Rotating Matrice4D on the Z-axis
+{
+	Matrix4 tmp;
+
+	if (angle == 90.0f)
+	{
+		Matrix4 RotateMatrix = Matrix4(0, 0, -1, 0, 0, 1, 0, 0, 0,  0, 1, 0, 0, 0, 0, 1);
+		tmp = RotateMatrix * *this;
+	}
+	return tmp;
+}
 
 
 int main()
 {
 	return 0;
+
 }

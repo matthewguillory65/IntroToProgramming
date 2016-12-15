@@ -37,7 +37,6 @@ public:
 		{
 			return NULL;
 		}
-
 		else
 		{
 			return node;
@@ -84,9 +83,13 @@ protected:
 	nodeType<Type> *first; //pointer to the first node of the list
 	nodeType<Type> *last; //pointer to the last node of the list
 
-	linkedListType() {}
+
 
 public:
+	//Default constructor
+	//Postcondition: current = NULL
+	linkedListType() {}
+
 	//Overload the assignment operator
 	const linkedListType<Type>& operator= (const linkedListType<Type>& otherList)
 	{
@@ -198,27 +201,31 @@ public:
 	//the first node, last points to the last node of the update list, and count is decremented by 1
 	void deleteNode(const Type& nodeInfo)
 	{
-		return i--;
+		nodeInfo.first *first;
+		nodeInfo.last
+		return count--;
 	}
 
 	//Function to return an iterator at the begining of the linked list
 	//Postcondition: Returns an iterator such that the current is set to first
 	linkedListIterator<Type> begin()
 	{
-		return first;
+		if(current == first)
+			return current;
 	}
 
 	//Funcion to rturn an iterator at the end of the linked list
 	//Postcondition: Returns an iterator such that current is set to NULL
 	linkedListIterator<Type> end()
 	{
-		return last;
+		if(current == NULL)
+			return current;
 	}
 
-	//Default constructor
-	//Initializes the list to an empty state
-	//Postcondition: first = NULL, last = NULL, count = 0;
-	linkedListType(){}
+	////Default constructor
+	////Initializes the list to an empty state
+	////Postcondition: first = NULL, last = NULL, count = 0;
+	//linkedListType(){}
 
 	//copy constructor
 	linkedListType(const linkedListType<Type>& otherList)
