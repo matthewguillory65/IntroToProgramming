@@ -9,6 +9,11 @@
 using namespace std;
 void Vector2DWork() {}
 
+bool Vector2D::operator==(const Vector2D & RHS) const// == overloader
+{
+	return (x == RHS.x && y == RHS.y);
+}
+
 Vector2D Vector2D::operator+ (Vector2D RHS)//Adding Vectors
 {
 	return Vector2D(x + RHS.x, y + RHS.y);
@@ -45,6 +50,11 @@ Vector2D Vector2D::Dot(Vector2D Dot)//The sum of x times x, plus y times y
 
 
 
+bool Vector3D::operator==(const Vector3D & RHS) const// == overloader
+{
+	return (x == RHS.x && y == RHS.y && z == RHS.z);
+}
+
 Vector3D Vector3D::operator+ (Vector3D RHS)//Adding Vectors
 {
 	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
@@ -57,7 +67,7 @@ Vector3D Vector3D::operator- (Vector3D RHS)//Subtracting Vectors
 
 Vector3D Vector3D::operator* (Vector3D RHS)//Multiplying Vectors
 {
-	return Vector3D(x + RHS.x, y + RHS.y, z + RHS.z);
+	return Vector3D(x * RHS.x, y * RHS.y, z * RHS.z);
 }
 
 Vector3D Vector3D::Magnitude()//Multiplying the x by the x, the y by the y, and the x by the z, adding the three, then getting the square root
@@ -89,6 +99,11 @@ Vector3D Vector3D::Cross(Vector3D Cro)//Cross multiplication between 3 Vectors
 }
 
 
+
+bool Vector4D::operator==(const Vector4D & RHS) const// == overloader
+{
+	return (x == RHS.x && y == RHS.y && z == RHS.z && w == RHS.w);
+}
 
 Vector4D Vector4D::operator+ (Vector4D RHS)//Adding Vectors
 {
@@ -241,7 +256,7 @@ Matrix4 Matrix4::RotateY(float angle) const//Rotating Matrice4D on the Y-axis
 
 	if (angle == -90.0f)
 	{
-		Matrix4 RotateMatrix = Matrix4(0, 0, 0, -1, 0, 0, 0, 1, 0, 0,  0, 1, 0, 0, 0, 1);
+		Matrix4 RotateMatrix = Matrix4(0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1);
 		tmp = RotateMatrix * *this;
 	}
 	return tmp;
@@ -253,7 +268,7 @@ Matrix4 Matrix4::RotateZ(float angle) const//Rotating Matrice4D on the Z-axis
 
 	if (angle == 90.0f)
 	{
-		Matrix4 RotateMatrix = Matrix4(0, 0, -1, 0, 0, 1, 0, 0, 0,  0, 1, 0, 0, 0, 0, 1);
+		Matrix4 RotateMatrix = Matrix4(0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 		tmp = RotateMatrix * *this;
 	}
 	return tmp;
@@ -262,6 +277,31 @@ Matrix4 Matrix4::RotateZ(float angle) const//Rotating Matrice4D on the Z-axis
 
 int main()
 {
-	return 0;
+	Vector2D A = Vector2D(1, 0);
+	Vector2D B = Vector2D(0, 1);
+	assert(A + B == Vector2D(1, 1));
+	assert(A - B == Vector2D(1, -1));
+	assert(A * B == Vector2D(0, 0));
 
+	Vector3D C = Vector3D(1, 0, 0);
+	Vector3D D = Vector3D(0, 1, 0);
+	Vector3D E = Vector3D(1, 0, 1);
+	assert(C + D + E == Vector3D(2, 1, 1));
+	assert(C - D - E == Vector3D(0, -1, -1));
+	assert(C * D * E == Vector3D(0, 0, 0));
+
+	Vector4D a = Vector4D(1, 0, 0, 0);
+	Vector4D b = Vector4D(0, 1, 0, 0);
+	Vector4D c = Vector4D(0, 0, 0, 0);
+	Vector4D d = Vector4D(0, 0, 0, 0);
+	//Vector4D e = Vector4D(0, 0, 0, 0);
+	//e = e + a;
+	//e = e + b;
+	//e = e + c;
+	//e = e + d;
+	assert(a + b + c + d == Vector4D(0, 1, 1, 0));
+	assert(a - b - c - d == Vector4D(0, 1, -1, 0));
+	assert(a * b * c * d == Vector4D(0, 0, 0, 0));
+
+	return 0;
 }
