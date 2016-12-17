@@ -294,11 +294,7 @@ int main()
 	Vector4D b = Vector4D(0, 1, 0, 0);
 	Vector4D c = Vector4D(0, 0, 0, 0);
 	Vector4D d = Vector4D(0, 0, 0, 0);
-	//Vector4D e = Vector4D(0, 0, 0, 0);
-	//e = e + a;
-	//e = e + b;
-	//e = e + c;
-	//e = e + d;
+
 	assert(a + b + c + d == Vector4D(0, 1, 1, 0));
 	assert(a - b - c - d == Vector4D(0, 1, -1, 0));
 	assert(a * b * c * d == Vector4D(0, 0, 0, 0));
