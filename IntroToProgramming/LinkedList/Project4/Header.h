@@ -230,9 +230,7 @@ public:
 	//copy constructor
 	linkedListType(const linkedListType<Type>& otherList)
 	{
-		first = NULL;
-		last = NULL;
-		count = 0;
+		this = otherList;
 	}
 
 	//deconstructor
@@ -245,7 +243,9 @@ private:
 	//Postcondition: A copy of list is created and assigned to this list
 	void copyList(const linkedListType<Type>& otherList)
 	{
-
+		first = otherlist.first;
+		count = otherlist.count;
+		last = otherlist.last;
 	}
 };
 

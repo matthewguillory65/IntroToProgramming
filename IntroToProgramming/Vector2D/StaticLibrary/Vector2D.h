@@ -12,9 +12,6 @@ public:
 		x = xpos, y = ypos;
 	}
 
-	bool operator==(const Vector2D & RHS) const;
-
-
 	Vector2D operator+(Vector2D RHS);
 
 
@@ -45,9 +42,6 @@ public:
 		x = xpos, y = ypos, z = zpos;
 	}
 
-	bool operator==(const Vector3D & RHS) const;
-
-
 	Vector3D operator+(Vector3D RHS);
 
 
@@ -72,17 +66,14 @@ public:
 class Vector4D
 {
 private:
-	float x, y, z, w;
+	float w, x, y, z;
 public:
 	Vector4D() {}
 
 	Vector4D(float wpos, float xpos, float ypos, float zpos)
 	{
-		x = xpos, y = ypos, z = zpos, w = wpos;
+		w = wpos, x = xpos, y = ypos, z = zpos;
 	}
-
-	bool operator==(const Vector4D & RHS) const;
-	
 
 	Vector4D operator+(Vector4D RHS);
 
