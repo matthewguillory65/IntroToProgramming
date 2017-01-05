@@ -10,11 +10,44 @@ int i;
 
 
 //Problem 1
-void Print(int variable)
-{
-	std::cout << variable << std::endl;
-}
-
+//void Print(int variable)
+//{
+//	std::cout << variable << std::endl;
+//}
+//int main()
+//
+//{
+//
+//	int the_variable = 1;
+//
+//	PrintInteger(the_variable);
+//
+//	{
+//
+//		PrintInteger(the_variable);
+//
+//		int the_variable = 2;
+//
+//		PrintInteger(the_variable);
+//
+//		{
+//
+//			PrintInteger(the_variable);
+//
+//			int the_variable = 3;
+//
+//			PrintInteger(the_variable);
+//
+//		}
+//
+//		PrintInteger(the_variable);
+//
+//	}
+//
+//	PrintInteger(the_variable);
+// 1, 1, 2, 2, 3, 2, 1
+// 
+//}
 
 //Problem 2
 
@@ -146,7 +179,8 @@ and explain how to fix them.
 //Problem 7
 int SumTo(int n)
 {
-	for (int i = 0; i <= n; i++);
+	int sumz = 0;
+	for (int i = 0; i <= 2; i++)
 	int sumz = i;
 	return sumz + n;
 }
