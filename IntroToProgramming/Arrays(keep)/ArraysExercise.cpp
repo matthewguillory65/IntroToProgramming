@@ -74,12 +74,13 @@ void ArrayQuestion5()
 {
 
 	int arr[10];
-	int i;
+	int d;
 
 	cout << "Please give me 10 numbers. \n \n";
 
 	cin >> arr[0];
 	cin >> arr[1];
+	cin >> arr[2];
 	cin >> arr[3];
 	cin >> arr[4];
 	cin >> arr[5];
@@ -88,7 +89,22 @@ void ArrayQuestion5()
 	cin >> arr[8];
 	cin >> arr[9];
 
-	cout << endl;
+	int largeNumber = arr[0];
+	int smallNumber = arr[0];
+	for (d = 0; d < 10; d++)
+
+	{
+
+		if (largeNumber < arr[d])
+			largeNumber = arr[d];
+
+		if (smallNumber > arr[d])
+			smallNumber = arr[d];
+
+	}
+
+	cout << "The largest number entered is " << largeNumber << "\n" << "The smallest number entered is " << smallNumber;
+	cout << "\n";
 
 
 
