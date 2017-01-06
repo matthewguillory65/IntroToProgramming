@@ -4,8 +4,8 @@ int main()
 	
 	//#1
 	int x;
-	int y = 0;
-	if (int y = 0);
+	int y;
+	if (y == 0)
 	{
 	x = 100;
 	}
@@ -97,7 +97,6 @@ int main()
 	case '+':
 		std::cout << a + b;
 		break;
-
 	case '-':
 		std::cout << a - b;
 		break;
@@ -136,7 +135,7 @@ int main()
 	std::cin >> input;
 	if (input < 0)
 	{
-	std::cout << "There are no negative months";
+	std::cout << "That is invalid. Try again.";
 	}
 	else if (input > 12)
 	{

@@ -82,17 +82,23 @@ float wordsNow()
 	std::cin >> value1 >> value2 >> value3;
 	if (value1 > value2)
 	{
-		if (value2 > value3)
-		{
-			std::cout << "The smaller number is:" << value3;
+		std::cout << "The smaller number is:" << value2 << std::endl;
+	}
+	else if (value1 < value3)
+	{
+		std::cout << "The smaller number is:" << value1 << std::endl;
+	}
 
-		}
-		else if (value2 < value3)
-		{
-			std::cout << "The smaller number is:" << value2;
-			std::cout << std::endl;
-		}
+	else if (value2 > value3)
+	{
+		std::cout << "The smaller number is:" << value3;
+		std::cout << std::endl;
+	}
 
+	else if (value2 < value3)
+	{
+		std::cout << "The smaller number is:" << value2;
+		std::cout << std::endl;
 	}
 
 	else if (value1 < value2)
@@ -247,6 +253,7 @@ void array_Input(int array_input[], int size)
 }
 
 
+//Problem 13
 int findIndex(int enter[], int size, int finder)
 {
 	for (int i = 0; i < size; i++)
