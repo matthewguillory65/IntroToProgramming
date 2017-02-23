@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Wurk.cpp">
+    <ClCompile Include="Conditionals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

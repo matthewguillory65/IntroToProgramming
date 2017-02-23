@@ -40,11 +40,10 @@ void ArrayQuestion2()
 
 void ArrayQuestion3()
 {
-	int numbers[10] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-	int number = 0;
+	int numbers[10];
 
-	for (int i = 0; i < 10; i++)
-		cout << numbers[i] << " \n";
+	for (int i = 10; i > 0; i--)
+		numbers[i-1] = i;
 		
 }
 
@@ -115,12 +114,16 @@ void ArrayQuestion6()
 Use a nested for loop to initialisethe numbers 1 - 9.
 Output the numbers in a grid format.*/
 {
-	int numbers[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int numbers[3][3];
+	int currentNum = 1;
 	for (int i = 0; i < 3; i++)
 	{
-		cout << endl;
+		
 		for (int j = 0; j < 3; j++)
-			cout << numbers[i][j];
+		{
+			numbers[i][j] = currentNum;
+			currentNum++;
+		}
 	}
 
 }

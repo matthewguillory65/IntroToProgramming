@@ -72,12 +72,12 @@ int main()
 	{
 		if (g % 3 == 0)
 		{
-			cout << g;
+			cout << g << "\n";
 			sum += g;
 		}
 		else if (g % 5 == 0)
 		{
-			cout << g;
+			cout << g << "\n";
 			sum += g;
 		}
 	}

@@ -10,44 +10,11 @@ int i;
 
 
 //Problem 1
-//void Print(int variable)
-//{
-//	std::cout << variable << std::endl;
-//}
-//int main()
-//
-//{
-//
-//	int the_variable = 1;
-//
-//	PrintInteger(the_variable);
-//
-//	{
-//
-//		PrintInteger(the_variable);
-//
-//		int the_variable = 2;
-//
-//		PrintInteger(the_variable);
-//
-//		{
-//
-//			PrintInteger(the_variable);
-//
-//			int the_variable = 3;
-//
-//			PrintInteger(the_variable);
-//
-//		}
-//
-//		PrintInteger(the_variable);
-//
-//	}
-//
-//	PrintInteger(the_variable);
-// 1, 1, 2, 2, 3, 2, 1
-// 
-//}
+void Print(int variable)
+{
+	std::cout << variable << std::endl;
+}
+
 
 //Problem 2
 
@@ -186,7 +153,7 @@ and explain how to fix them.
 int SumTo(int n)
 {
 	int sumz = 0;
-	for (int i = 0; i <= 2; i++)
+	for (int i = 0; i <= n; i++)
 	int sumz = i;
 	return sumz + n;
 }
@@ -198,10 +165,8 @@ int Array(int itArr[], int size)
 	int added;
 	for (int l = 0; l < size; l++)
 	{
-		int tem = itArr[l];
-		added = tem + itArr[l];
+		added += itArr[l];
 	}
-
 	return added;
 }
 
@@ -438,9 +403,37 @@ int RPS()
 }
 
 
-
 int main()
 {
+	/*int the_variable = 1;
+
+	PrintInteger(the_variable)
+
+	{
+
+		PrintInteger(the_variable);
+
+		int the_variable = 2;
+
+		PrintInteger(the_variable);
+
+		{
+
+			PrintInteger(the_variable);
+
+			int the_variable = 3;
+
+			PrintInteger(the_variable);
+
+		}
+
+		PrintInteger(the_variable);
+
+	}
+
+	PrintInteger(the_variable);
+	1, 1, 2, 2, 3, 2, 1*/
+
 	//part of 7
 	int result = SumTo(3); //result = 1 + 2 + 3 = 6
 	std::cout << result << std::endl;

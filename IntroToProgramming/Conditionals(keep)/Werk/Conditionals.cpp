@@ -66,10 +66,12 @@ int main()
 	std::cout << "1";
 	break;
 	case 2:
+	case 3:
 	std::cout << "2 or 3";
 	break;
-	case 3:
+	case 4:
 	std::cout << "4";
+	break;
 	default:
 	std::cout << "Invalid";
 	break;
